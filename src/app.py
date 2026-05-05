@@ -25,8 +25,7 @@ def search_user(username):
 
 def ping_host(host):
     """Comprueba si un host es accesible."""
-    # Vulnerabilidad 3: Command Injection — os.system con input del usuario
-    # os.system("ping -c 1 " + host)
+    # Vulnerabilidad 3: Command Injection — sin input del usuario
     import subprocess
     subprocess.run(["ping", "-c" "1", host] check=True)
 
